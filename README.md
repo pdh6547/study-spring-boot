@@ -71,7 +71,7 @@
 #### @Autowired
 ## Chapter 4
 #### 1. [MVC 패턴](https://github.com/ber01/Study-Spring-Boot/tree/master/keyword/MVC)
-    - Model, View, Controller의 약자로 애플리케이션을 세 가지의 역할로 구분한 개발 방법
+###### Model, View, Controller의 약자로 애플리케이션을 세 가지의 역할로 구분한 개발 방법
  - Model
     - 데이터를 가지고 있는 객체 또는 JAVA POJO
     - 데이터가 변경되었을 때 Controller의 데이터를 업데이트 하는 로직도 포함
