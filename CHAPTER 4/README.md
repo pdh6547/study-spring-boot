@@ -9,5 +9,16 @@
     - H2
  - 도메인 매핑
     - JPA를 사용하여 DB와 도메인 클래스를 연결
+    - Board, User 클래스 생성
  - 도메인 테스트
     - JpaMappingTest 클래스 생성 후 테스트
+    - UserRepository 인터페이스 생성
+    - BoardRepositoyu 인터페이스 생성
+    - BoardService 클래스 생성
+    - BoardController 클래스 생성
+ - CommandLineRunner를 이용해 DB에 데이터 넣기
+    - CommandLineRunner 인터페이스 추가 (200개의 데이터 생성)
+ -  게시글 리스트 기능 만들기
+    - 리스트 뷰 페이지 작성 (list.html)
+ - 데이터 등록 수정 게시판 폼 만들기
+    - 폼 페이지 작성 (form.html)

@@ -70,64 +70,36 @@
  - JSON의 직렬화와 역직렬화를 수행하는 라이브러리인 Gson과 Jackson API의 테스트를 제공한다.
 #### @Autowired
 ## Chapter 4
-#### 1. [MVC 패턴](https://github.com/ber01/Study-Spring-Boot/tree/master/keyword/MVC)
-###### Model, View, Controller의 약자로 애플리케이션을 세 가지의 역할로 구분한 개발 방법
- - Model
-    - 데이터를 가지고 있는 객체 또는 JAVA POJO
-    - 데이터가 변경되었을 때 Controller의 데이터를 업데이트 하는 로직도 포함
- - View
-    - Model에 포함된 데이터의 시각화를 담당
-    - html/css/javascript들을 모아둔 컨테이너
- - Controller
-    - 모델과 뷰에 전부 영향을 미치며 모델 객체로의 데이터 흐름을 제어
-    - 데이터가 update 되었을 때 뷰를 갱신, 뷰와 모델의 역할을 분리
-#### 2. [타임리프](https://github.com/rhkd4560/Study-SpringBoot/tree/master/Spring%204day/homework)
-#### 3. [템플릿, 템플릿 엔진](https://github.com/rhkd4560/Study-SpringBoot/tree/master/Spring%204day/homework)
-#### 4. [의존 라이브러리](https://github.com/dongh9508/Study-SpringBoot2/tree/master/keyword/LINK/dependency%20library)
- - web
+#### 1. [MVC 패턴](https://github.com/ber01/Study-Spring-Boot/tree/master/keyword/MVC) (민경환)
+#### 2. [타임리프](https://github.com/rhkd4560/Study-SpringBoot/tree/master/Spring%204day/homework) (최광민)
+#### 3. [템플릿, 템플릿 엔진](https://github.com/rhkd4560/Study-SpringBoot/tree/master/Spring%204day/homework) (최광민)
+#### 4. [의존 라이브러리](https://github.com/dongh9508/Study-SpringBoot2/tree/master/keyword/LINK/dependency%20library) (임동훈)
+ - Web
  - 타임리프
  - JPA
  - Devtools
  - Lombok
  - H2
 
-#### 5. [어노테이션 8종](https://github.com/etg6550/2019WinterProject/tree/master/Day4/HomeWork)
+#### 5. [어노테이션](https://github.com/etg6550/2019WinterProject/tree/master/Day4/HomeWork) (엄태균)
  - Selializable
-     - 자바 직렬화란 자바 시스템 내부에서 사용되는 객체 또는 데이터를 외부의 자바 시스템에서도 사용 할 수 있도록 바이 형태로 데이터 변환하 기술
-     - 바이트로 변환 된 데이터를 다시 객체로 변환하는 기술(역직렬화)
  - @Getter
-    - 클래스내 모든 필드의 Getter 메소드를 자동생성
  - @NoArgsConstructor
-     - 파라미터가 없는 기본 생성자를 생성
  - @Entity
-     - 테이블과 링크될 클래스임을 나타냄
-     - 언더스코어 네이밍(언더바)으로 이름을 매칭한다.
  - @Table
-     - 별도의 이름을 가진 데이터베이스 테이블과 매핑 할 수 있다.
-     - 기본적으로 @Entity로 선언된 클래스의 이름은 실제 데이터베이스의 테이블 명과 일치하는 것을 매핑한다.
-     - @Entity 클래스명과 데이터베이스의 테이블명이 다르면 @Table(name="XXX") 같은 형식으로 작성하면 이름 다르게 해서 매핑 가능
  - @Id
-    - 해당 테이블의 PK필드를 나타낸다.
  - @Column
-     - 테이블의 컬럼을 나타내면, 굳이 선언하지 않더라도 해당 클래스의 필드는 모두 컬럼이 된다.
-    - 기본값 외에 추가로 변경이 필요한 옵션이 있을경우 사용한다.
-    - 문자열의 경우 VARCHAR(255)가 기본값인데 사이즈를 500으로 늘리고 싶거나 타입을 TEXT로 변경하는 경우 등에 사용된다.
  - @Builder
-     - 해당 클래스의 빌더패턴 클래스를 생성한다.
-     - $빌더패턴$이란. 객체의 생성과정과 표현방법을 분리하여, 객체를 단계별 동일한 생성 절차로 복잡한 객체로 만드는 패턴이다.
-     - 빌드패턴을 쓰는 경우는 생성자나 생성자나 static 팩토리 메소드에서 많은 매개변수를 갖게 되는 클래스를 설계할 때는 필더 패턴이 좋은 선택이다. 이유는 코드의 작성이 쉽고 가독성이 좋기 때문이다.
-     - 생성자 상단에 선언시 생성자에 포함된 필드만 빌더에 포함한다.
-     - 예를 들어 아래 생성자의 경우 지금 채워야할 필드가 무엇인지 명확히 지정할 수가 없다
-     ~~~java
-     public Example(String a, String b) {
-       this.a = a;
-       this.b = b;
-     }
-     ~~~
-     - 하지만 빌더를 사용하면 어느 필드에 어떤 값을 채워야 할지 명확하게 인지할 수 있다.
-     ~~~java
-     Example.builder()
-      .a(a)
-      .b(b)
-      .build();
-    ~~~
+
+#### 6. [어노테이션2]() (민경환)
+  - @Service
+  - Pageable
+  - @Controller
+  - @RequestMapping
+  - @PageableMapping
+  - @PageableParam
+  - @PageableDefault
+  - @Bean
+
+## Chapter 5
+#### 1. [스프링 부트 시큐리티](https://github.com/etg6550/2019WinterProject/tree/master/Day6) (엄태균)
