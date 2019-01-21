@@ -33,6 +33,7 @@ public class User implements Serializable {
     private String principal;
 
     @Column
+    @Enumerated(EnumType.STRING)
     private SocialType socialType;
 
     @Column

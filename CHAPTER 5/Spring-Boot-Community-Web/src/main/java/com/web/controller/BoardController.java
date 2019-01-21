@@ -23,6 +23,8 @@ public class BoardController {
         return "/board/form";
     }
     @GetMapping("/list")
+    //Model 컨트롤러에서 뷰를 보여주기 위한 인터페이스
+    //addAttribute : view내부의 변수와 매핑
     public String list (@PageableDefault Pageable pageable, Model model) {
         model.addAttribute("boardList", boardService.findBoardList(pageable));
         return "/board/list";
