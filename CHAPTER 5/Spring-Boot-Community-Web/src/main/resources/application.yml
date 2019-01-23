@@ -1,7 +1,7 @@
 facebook:
   client:
-    clientId: clientIdTest
-    clientSecret: clientSecretTest
+    clientId: 683689485360778
+    clientSecret: e1bb075abee5116ea726470e244a8547
     accessTokenUri: https://graph.facebook.com/oauth/access_token
     userAuthorizationUri: https://www.facebook.com/dialog/oauth?display=popup
     tokenName: oauth_token
@@ -13,8 +13,8 @@ facebook:
 
 goodle:
   client:
-    clientId: clientIdTest
-    clientSecret: clientSecretTest
+    clientId: 362378952728-on0ordlbf93hc363bkkqf40rbr3tjoq5.apps.googleusercontent.com
+    clientSecret: 0l1rW8F6dacnxo7pwwJmFAB-
     accessTokenUri: https://accounts.google.com/o/oauth2/token
     userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
     scope: email,profile

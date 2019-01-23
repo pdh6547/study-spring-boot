@@ -70,10 +70,10 @@
  - JSON의 직렬화와 역직렬화를 수행하는 라이브러리인 Gson과 Jackson API의 테스트를 제공한다.
 #### @Autowired
 ## Chapter 4
-#### 1. [MVC 패턴](https://github.com/ber01/Study-Spring-Boot/tree/master/keyword/MVC) (민경환)
-#### 2. [타임리프](https://github.com/rhkd4560/Study-SpringBoot/tree/master/Spring%204day/homework) (최광민)
-#### 3. [템플릿, 템플릿 엔진](https://github.com/rhkd4560/Study-SpringBoot/tree/master/Spring%204day/homework) (최광민)
-#### 4. [의존 라이브러리](https://github.com/dongh9508/Study-SpringBoot2/tree/master/keyword/LINK/dependency%20library) (임동훈)
+#### 1. [MVC 패턴 (민경환)](https://github.com/ber01/Study-Spring-Boot/tree/master/keyword/MVC)
+#### 2. [타임리프 (최광민)](https://github.com/rhkd4560/Study-SpringBoot/tree/master/Spring%204day/homework)
+#### 3. [템플릿, 템플릿 엔진 (최광민)](https://github.com/rhkd4560/Study-SpringBoot/tree/master/Spring%204day/homework)
+#### 4. [의존 라이브러리 (임동훈)](https://github.com/dongh9508/Study-SpringBoot2/tree/master/keyword/LINK/dependency%20library)
  - Web
  - 타임리프
  - JPA
@@ -81,7 +81,7 @@
  - Lombok
  - H2
 
-#### 5. [어노테이션](https://github.com/etg6550/2019WinterProject/tree/master/Day4/HomeWork) (엄태균)
+#### 5. [Annotation (엄태균)](https://github.com/etg6550/2019WinterProject/tree/master/Day4/HomeWork)
  - Selializable
  - @Getter
  - @NoArgsConstructor
@@ -91,7 +91,7 @@
  - @Column
  - @Builder
 
-#### 6. [어노테이션2]() (민경환)
+#### 6. [Annotation2 (민경환)](https://github.com/ber01/Study-Spring-Boot/tree/master/keyword/Annotation2)
   - @Service
   - Pageable
   - @Controller
@@ -102,4 +102,30 @@
   - @Bean
 
 ## Chapter 5
-#### 1. [스프링 부트 시큐리티](https://github.com/etg6550/2019WinterProject/tree/master/Day6) (엄태균)
+#### 1. [스프링 부트 시큐리티 (엄태균)](https://github.com/etg6550/2019WinterProject/tree/master/Day6)
+
+#### 2. [Annotation & Interface](https://github.com/pdh6547/study-spring-boot/blob/master/Keyword/Homework/Annotaion%20and%20Interface.md)
+  - @NestedConfigurationProperty
+  - AuthorizationCodeResourceDetails
+  - ResourceServerProperties
+  - @Configuration
+  - 동기 / 비동기 통신
+
+#### 3. [Annotation & Interface2](https://github.com/pdh6547/study-spring-boot/blob/master/Keyword/Homework/Annotaion%20and%20Interface.md)
+  - @EnableWebSecurity
+  - WebSecurityConfigurerAdapter
+  - HttpServletRequest
+  - XFrameOptionsHeaderWriter
+  - CharacterEncodingFilter
+   -CsrfFilter
+
+####4. [Annotation & Interface3](https://github.com/woghd9072/study-spring-boot/tree/master/Keyword/Homework)
+  - @EnableOAuth2Client
+  - OAuth2ClientContext
+  - BasicAuthenticationFilter
+  - FilterRegistrationBean
+  - Filter
+  - CompositeFilter
+  - OAuth2ClientAuthenticationProcessingFilter
+  - OAuth2RestTemplate
+  - UserInfoTokenService

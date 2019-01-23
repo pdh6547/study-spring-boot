@@ -25,9 +25,7 @@ import javax.servlet.Filter;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.web.domain.enums.SocialType.FACEBOOK;
-import static com.web.domain.enums.SocialType.GOOGLE;
-import static com.web.domain.enums.SocialType.KAKAO;
+import static com.web.domain.enums.SocialType.*;
 
 @Configuration
 @EnableWebSecurity
@@ -40,15 +38,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         CharacterEncodingFilter filter = new CharacterEncodingFilter();
-        http
-                .authorizeRequests()
-                .antMatchers("/", "/login/**", "/css/**", "/images/**", "/js/**", "console/**").permitAll()
+        http.authorizeRequests()
+                .antMatchers("/", "/login/**", "/css/**", "/images/**", "/js/**",
+                        "/console/**").permitAll()
+                .antMatchers("/facebook").hasAuthority(FACEBOOK.getRoleType())
+                .antMatchers("/google").hasAuthority(GOOGLE.getRoleType())
+                .antMatchers("/kakao").hasAuthority(KAKAO.getRoleType())
                 .anyRequest().authenticated()
                 .and()
                 .headers().frameOptions().disable()
                 .and()
                 .exceptionHandling()
-                .authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/login"))
+                .authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint(
+                        "/login"))
                 .and()
                 .formLogin()
                 .successForwardUrl("/board/list")
@@ -62,10 +64,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .addFilterBefore(filter, CsrfFilter.class)
                 .addFilterBefore(oauth2Filter(), BasicAuthenticationFilter.class)
                 .csrf().disable();
+
     }
 
     @Bean
-    public FilterRegistrationBean oauth2ClientFilterRegistration(OAuth2ClientContextFilter filter) {
+    public FilterRegistrationBean oauth2ClientFilterRegistration(
+            OAuth2ClientContextFilter filter ){
         FilterRegistrationBean registration = new FilterRegistrationBean();
         registration.setFilter(filter);
         registration.setOrder(-100);
@@ -75,20 +79,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private Filter oauth2Filter() {
         CompositeFilter filter = new CompositeFilter();
         List<Filter> filters = new ArrayList<>();
-        filters.add(oauth2Filter(facebook(),"/login/facebook", FACEBOOK));
-        filters.add(oauth2Filter(google(),"/login/google", GOOGLE));
-        filters.add(oauth2Filter(kakao(),"/login/kakao", KAKAO));
+        filters.add(oauth2Filter(facebook(), "/login/facebook", FACEBOOK));
+        filters.add(oauth2Filter(google(), "/login/google", GOOGLE));
+        filters.add(oauth2Filter(kakao(), "/login/kakao", KAKAO));
         filter.setFilters(filters);
         return filter;
     }
 
     private Filter oauth2Filter(ClientResources client, String path, SocialType socialType) {
-        OAuth2ClientAuthenticationProcessingFilter filter = new OAuth2ClientAuthenticationProcessingFilter(path);
+        OAuth2ClientAuthenticationProcessingFilter filter =
+                new OAuth2ClientAuthenticationProcessingFilter(path);
         OAuth2RestTemplate template = new OAuth2RestTemplate(client.getClient(), oAuth2ClientContext);
         filter.setRestTemplate(template);
         filter.setTokenServices(new UserTokenService(client, socialType));
-        filter.setAuthenticationSuccessHandler(((request, response, authentication) -> response.sendRedirect("/error")));
+        filter.setAuthenticationFailureHandler(((request, response, exception) ->
+                response.sendRedirect("/error")));
         return filter;
+
     }
 
     @Bean
