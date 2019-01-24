@@ -111,7 +111,7 @@
   - @Configuration
   - 동기 / 비동기 통신
 
-#### 3. [Annotation & Interface2](https://github.com/pdh6547/study-spring-boot/blob/master/Keyword/Homework/Annotaion%20and%20Interface.md)
+#### 3. [Annotation & Interface2](https://github.com/hagome0/Study-Spring-Boot/tree/master/keyword/Annotaion%20and%20Interface2)
   - @EnableWebSecurity
   - WebSecurityConfigurerAdapter
   - HttpServletRequest
@@ -119,7 +119,7 @@
   - CharacterEncodingFilter
    -CsrfFilter
 
-####4. [Annotation & Interface3](https://github.com/woghd9072/study-spring-boot/tree/master/Keyword/Homework)
+#### 4. [Annotation & Interface3](https://github.com/woghd9072/study-spring-boot/tree/master/Keyword/Homework)
   - @EnableOAuth2Client
   - OAuth2ClientContext
   - BasicAuthenticationFilter
