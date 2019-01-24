@@ -15,6 +15,7 @@ public class ClientResources {
     public AuthorizationCodeResourceDetails getClient() {
         return client;
     }
+
     public ResourceServerProperties getResource() {
         return resource;
     }
