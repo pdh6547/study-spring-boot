@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 #SNS 연동을 위한 resource 를 추가
 
 facebook :
   client :
     clientId : clientIdTest
-=======
-facebook:
-  client:
-    clientId: clientIdTest
->>>>>>> 0fd4baefd30c3b5383e739fbdd64b6f0465ea92c
     clientSecret: clientSecretTest
     accessTokenUri: https://graph.facebook.com/oauth/access_token
     userAuthorizationUri: https://www.facebook.com/dialog/oauth?display=popup
@@ -19,15 +13,9 @@ facebook:
   resource:
     userInfoUri: https://graph.facebook.com/me?fields=id,name,email,link
 
-<<<<<<< HEAD
 google :
   client :
     clientId : clientIdTest
-=======
-goodle:
-  client:
-    clientId: clientIdTest
->>>>>>> 0fd4baefd30c3b5383e739fbdd64b6f0465ea92c
     clientSecret: clientSecretTest
     accessTokenUri: https://accounts.google.com/o/oauth2/token
     userAuthorizationUri: https://accounts.google.com/o/oauth2/auth

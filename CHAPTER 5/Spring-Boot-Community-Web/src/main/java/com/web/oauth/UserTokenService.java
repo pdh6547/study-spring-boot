@@ -1,7 +1,6 @@
-package com.web.config;
+package com.web.oauth;
 
 import com.web.domain.enums.SocialType;
-import com.web.oauth.ClientResources;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.AuthoritiesExtractor;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.UserInfoTokenServices;
 import org.springframework.security.core.GrantedAuthority;
@@ -10,7 +9,7 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import java.util.List;
 import java.util.Map;
 
-public class UserTokenService extends UserInfoTokenServices {
+public class UserTokenService  extends UserInfoTokenServices {
 
     public UserTokenService(ClientResources resources, SocialType socialType) {
         super(resources.getResource().getUserInfoUri(), resources.getClient().getClientId());
@@ -18,7 +17,6 @@ public class UserTokenService extends UserInfoTokenServices {
     }
 
     public static class OAuth2AuthoritiesExtractor implements AuthoritiesExtractor {
-
         private String socialType;
 
         public OAuth2AuthoritiesExtractor(SocialType socialType) {
