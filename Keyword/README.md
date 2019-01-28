@@ -129,3 +129,7 @@
   - OAuth2ClientAuthenticationProcessingFilter
   - OAuth2RestTemplate
   - UserInfoTokenService
+#### 5. [OAth2에 대하여](https://github.com/pdh6547/study-spring-boot/blob/master/Keyword/OAuth2/README.md)
+#### 6. [p136, p137 코드정리 (민경환)](https://github.com/ber01/Study-Spring-Boot/blob/master/keyword/p136/README.md)
+
+#### 7. [p138 ~ p141 코드정리 (신무곤)](https://github.com/mkshin96/study-spring-boot/blob/master/%EC%9A%A9%EC%96%B4%20%EC%A0%95%EB%A6%AC/p138~p141.md)
