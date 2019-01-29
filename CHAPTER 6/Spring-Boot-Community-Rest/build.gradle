@@ -45,7 +45,6 @@ project(':data-rest') {
         }
     }
 }
-cd t
 project(':rest-web') {
     dependencies {
         compile('org.springframework.boot:spring-boot-starter-web') {
