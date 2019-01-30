@@ -3,6 +3,7 @@ package com.web.domain.enums;
 public enum SocialType {
     FACEBOOK("facebook"),
     GOOGLE("google"),
+    GITHUB("github"),
     KAKAO("kakao");
 
 
